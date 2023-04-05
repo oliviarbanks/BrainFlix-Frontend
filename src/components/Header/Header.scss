@@ -1,0 +1,57 @@
+@import "../../styles/partials/global";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.header {
+  &__logo {
+    width: 50%;
+    padding: 1rem 0 0 5.5rem;
+  }
+  &__search {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+  }
+
+  &__search-input {
+    width: 65%;
+    border-radius: 0.5rem;
+    border-color: #afafaf;
+    font-family: "avenir";
+    font-weight: 400;
+    color: #323232;
+    padding-left: 2rem;
+    background-color: $Alabaster;
+  }
+  &__search-img {
+    position: relative;
+    left: 28px;
+  }
+
+  &__avatar {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0 1rem;
+  }
+  &__upload {
+    width: 90%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  &__button {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    background-color: #0095ff;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+  }
+  &__span {
+    width: 80%;
+    color: $White;
+  }
+}
