@@ -1,9 +1,14 @@
+import Comment from "../Comment/Comment";
+import "./CommentsContainer.scss";
+
 function CommentsContainer({ videoData, videoIndex }) {
-  console.log(videoData, "from comments container");
+  const commentCount = videoData[videoIndex].comments.length;
   return (
     <div>
-      <h1>This is the comments container component</h1>
-      <p className="video__comment">{videoData[videoIndex].comment}</p>
+      <p>{commentCount}</p>
+      {videoData[videoIndex].comments.map((comment) => (
+        <Comment key={comment.id} comment={comment} />
+      ))}
     </div>
   );
 }

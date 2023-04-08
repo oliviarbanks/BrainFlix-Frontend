@@ -1,7 +1,12 @@
-function SideBarVideo() {
+import "./SideBarVideo.scss";
+
+function SideBarVideo({ video, clickHandler, index }) {
   return (
     <div>
-      <h1>This is the Side bar video component</h1>
+      <p>{video.channel} </p>
+      <p>{video.title}</p>
+      <img className="main__video" src={video.image}></img>
+      <button onClick={() => clickHandler(index)}>Click Me</button>
     </div>
   );
 }
