@@ -8,10 +8,13 @@ import videoData from "./data/video-details.json";
 
 function App() {
   const [videoIndex, setVideoIndex] = useState(0);
-  console.log(videoIndex);
 
-  const buttonClicked = () => {
-    setVideoIndex(videoIndex + 1);
+  const videoList = videoData.filter(
+    (video) => video.id !== videoData[videoIndex].id
+  );
+
+  const buttonClicked = (index) => {
+    setVideoIndex(index + 1);
   };
 
   return (
@@ -22,7 +25,11 @@ function App() {
       <MainVideo videoData={videoData} videoIndex={videoIndex} />
       <VideoDetails videoData={videoData} videoIndex={videoIndex} />
       <CommentsContainer videoData={videoData} videoIndex={videoIndex} />
-      <SideBarVideosContainer />
+      <SideBarVideosContainer
+        videoData={videoList}
+        videoIndex={videoIndex}
+        clickHandler={buttonClicked}
+      />
     </div>
   );
 }
