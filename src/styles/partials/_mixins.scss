@@ -15,10 +15,21 @@
 @mixin button {
   width: 100%;
   display: flex;
-  padding: 1rem;
+  padding: 0.7rem;
   background-color: #0095ff;
   align-items: center;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   border: none;
   font-weight: 700;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+@mixin avatar {
+  width: 15%;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
 }

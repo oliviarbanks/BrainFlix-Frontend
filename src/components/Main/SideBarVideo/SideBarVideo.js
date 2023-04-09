@@ -2,11 +2,14 @@ import "./SideBarVideo.scss";
 
 function SideBarVideo({ video, clickHandler, index }) {
   return (
-    <div>
-      <p>{video.channel} </p>
-      <p>{video.title}</p>
-      <img className="main__video" src={video.image}></img>
-      <button onClick={() => clickHandler(index)}>Click Me</button>
+    <div className="videos" onClick={() => clickHandler(index)}>
+      <div className="videos__container">
+        <img className="videos__item" src={video.image}></img>
+      </div>
+      <div className="videos__content">
+        <p className="videos__title">{video.title}</p>
+        <p className="videos__author"> {video.channel} </p>
+      </div>
     </div>
   );
 }

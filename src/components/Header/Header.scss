@@ -38,13 +38,12 @@
   &__upload {
     width: 90%;
     padding-left: 1rem;
-    padding-top: 1rem;
   }
   &__button {
     @include button;
+    margin-bottom: 1rem;
   }
   &__span {
     width: 80%;
-    color: $White;
   }
 }

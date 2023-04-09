@@ -1,3 +1,55 @@
-.video__comments {
-  color: blue;
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixins";
+
+.commentContainer {
+  &__count {
+    font-weight: 700;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+  }
+  &__header {
+    color: $Silver;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0;
+  }
+  &__box {
+    display: flex;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__avatar {
+    width: 15%;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
+  }
+  &__input {
+    width: 66vw;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    padding-left: 0.5rem;
+    color: black;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid $Silver;
+    background-color: $Alabaster;
+  }
+  &__button {
+    @include button;
+    margin-top: 1rem;
+  }
+  &__button--text {
+    width: 80%;
+  }
 }

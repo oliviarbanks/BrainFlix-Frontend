@@ -1,10 +1,10 @@
 import SideBarVideo from "../SideBarVideo/SideBarVideo";
+import "./SideBarVideosContainer.scss";
 
 function SideBarVideosContainer({ videoData, clickHandler }) {
-  console.log(videoData[0].id);
   return (
-    <div>
-      <h1>NEXT VIDEOS</h1>
+    <div className="videosContainer">
+      <h2 className="videosContainer__header">NEXT VIDEOS</h2>
       {videoData.map((video, index) => {
         return (
           <SideBarVideo

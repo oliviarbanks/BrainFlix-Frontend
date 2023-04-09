@@ -1,3 +1,33 @@
-.video__title {
-  color: red($color: #000000);
+@import "../../../styles/partials/variables";
+
+.videoDetails {
+  &__header {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $Mercury;
+    border-bottom: 1px solid $Mercury;
+    padding: 0 1rem;
+  }
+  &__author {
+    font-size: 1rem;
+  }
+  &__title {
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+  &__icon {
+    display: flex;
+  }
+}
+.icon__logo {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding-right: 0.5rem;
 }

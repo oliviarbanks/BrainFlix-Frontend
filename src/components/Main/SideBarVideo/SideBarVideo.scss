@@ -1,4 +1,24 @@
-.main__video {
-  width: 50%;
-  height: 30%;
+.videos {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 8rem;
+    max-height: 5rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &__content {
+    padding-left: 1rem;
+  }
+  &__title {
+    width: 100%;
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  &__author {
+    margin-top: 0.5rem;
+  }
 }
