@@ -20,8 +20,6 @@ function App() {
   return (
     <div>
       <Header />
-      <h1>videoIndex: {videoIndex}</h1>
-      <button onClick={buttonClicked}>Click Me</button>
       <MainVideo videoData={videoData} videoIndex={videoIndex} />
       <VideoDetails videoData={videoData} videoIndex={videoIndex} />
       <CommentsContainer videoData={videoData} videoIndex={videoIndex} />

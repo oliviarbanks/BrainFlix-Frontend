@@ -1,0 +1,11 @@
+@import "../../../styles/partials/variables";
+
+.videosContainer {
+  border-top: 1px solid $Mercury;
+  margin-left: 1rem;
+  &__header {
+    font-size: 1rem;
+    color: $Silver;
+    font-weight: 600;
+  }
+}

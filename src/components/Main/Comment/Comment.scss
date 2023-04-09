@@ -1,0 +1,42 @@
+@import "../../../styles/partials/variables";
+@import "../../../styles/partials/mixins";
+
+.comment {
+  display: flex;
+  border-top: 1px solid $Mercury;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 91%;
+
+  &__avatar {
+    @include avatar;
+    background-color: $Mercury;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__author {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
+  &__date {
+    color: $Silver;
+    font-weight: 500;
+  }
+  &__comment {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+}
