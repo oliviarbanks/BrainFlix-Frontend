@@ -25,25 +25,32 @@
   }
   &__info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+    }
   }
   &__author {
     font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
     @include tablet {
       padding-right: 2rem;
       font-weight: 700;
     }
   }
   &__date {
-    @include tablet {
-      color: $Silver;
-    }
+    color: $Silver;
   }
   &__images {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    color: $Silver;
+
     @include tablet {
-      color: $Silver;
+      display: flex;
+      flex-direction: row;
     }
   }
   &__icon {
@@ -70,6 +77,7 @@
   padding-right: 0.5rem;
 }
 .eyeLogo {
+  margin-bottom: 0;
   @include tablet {
     padding-right: 2rem;
   }
