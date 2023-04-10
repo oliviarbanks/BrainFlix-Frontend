@@ -8,17 +8,28 @@
   margin-top: 1rem;
   margin-right: 1rem;
   width: 91%;
+  @include tablet {
+    width: 90%;
+    margin-left: 1.5rem;
+  }
 
   &__avatar {
     @include avatar;
     background-color: $Mercury;
     margin-right: 0.5rem;
     margin-top: 1rem;
+    @include tablet {
+      width: 1%;
+      height: 2rem;
+    }
   }
   &__container {
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+    @include tablet {
+      padding-left: 0.5rem;
+    }
   }
   &__header {
     display: flex;
@@ -29,14 +40,23 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1rem;
-    padding-right: 1rem;
+
+    @include tablet {
+      font-size: 0.8rem;
+    }
   }
   &__date {
     color: $Silver;
     font-weight: 500;
+    @include tablet {
+      font-size: 0.8rem;
+    }
   }
   &__comment {
     margin: 0;
     font-size: 0.8rem;
+    @include tablet {
+      font-size: 0.9rem;
+    }
   }
 }

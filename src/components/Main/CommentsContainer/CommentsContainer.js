@@ -14,18 +14,21 @@ function CommentsContainer({ videoData, videoIndex }) {
           src={avatar}
           alt="avatar image"
         ></img>
-
-        <div className="commentContainer__container">
-          <p className="commentContainer__header">JOIN THE CONVERSATION</p>
-          <input
-            className="commentContainer__input"
-            placeholder="Add a new comment"
-          ></input>
-          <button className="commentContainer__button">
-            <img src={commentIcon} alt="add comment icon"></img>
-            <span className="commentContainer__button--text">COMMENT</span>
-          </button>
-        </div>
+        <form className="commentContainer__container">
+          <label className="commentContainer__header" for="comment">
+            JOIN THE CONVERSATION
+          </label>
+          <div className="commentContainer__tablet">
+            <input
+              className="commentContainer__input"
+              placeholder="Add a new comment"
+            ></input>
+            <button className="commentContainer__button">
+              <img src={commentIcon} alt="add comment icon"></img>
+              <span className="commentContainer__button--text">COMMENT</span>
+            </button>
+          </div>
+        </form>
       </div>
       {videoData[videoIndex].comments.map((comment) => (
         <Comment key={comment.id} comment={comment} />

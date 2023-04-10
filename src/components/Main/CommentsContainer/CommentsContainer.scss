@@ -4,11 +4,16 @@
 .commentContainer {
   &__count {
     font-weight: 700;
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 16px;
-    padding-left: 16px;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    @include tablet {
+      padding-bottom: 0;
+      padding-top: 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+  &__box {
+    display: flex;
   }
   &__header {
     color: $Silver;
@@ -17,23 +22,34 @@
     padding-bottom: 0.2rem;
     margin-bottom: 0;
   }
-  &__box {
-    display: flex;
-  }
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
   &__avatar {
-    width: 15%;
+    width: 3rem;
     object-fit: cover;
     border-radius: 50%;
     height: 3rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 2rem;
+    @include tablet {
+      @include tablet {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 0.5rem;
+      }
+    }
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__tablet {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   &__input {
     width: 66vw;
     padding-top: 0.5rem;
@@ -44,10 +60,19 @@
     border-radius: 4px;
     border: 1px solid $Silver;
     background-color: $Alabaster;
+    @include tablet {
+      padding-left: 0.5rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
   &__button {
     @include button;
     margin-top: 1rem;
+    @include tablet {
+      margin-left: 1rem;
+      width: 30%;
+    }
   }
   &__button--text {
     width: 80%;

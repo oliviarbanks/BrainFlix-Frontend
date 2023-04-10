@@ -3,9 +3,19 @@
 @import "../../styles/partials/variables";
 
 .header {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
   &__logo {
     width: 50%;
     padding: 1rem 0 0 5.5rem;
+    @include tablet {
+      padding-left: 1rem;
+      padding-right: 0px;
+      margin-right: 6.5rem;
+    }
   }
   &__search {
     display: flex;
@@ -22,26 +32,51 @@
     color: #323232;
     padding-left: 2rem;
     background-color: $Alabaster;
+    @include tablet {
+      width: 13rem;
+      height: 2.5rem;
+    }
   }
   &__search-img {
     position: relative;
     left: 28px;
   }
 
-  &__avatar {
+  &__avatar-mobile {
     width: 15vw;
     height: 15vw;
     object-fit: cover;
     border-radius: 50%;
     padding: 0 1rem;
+    @include tablet {
+      display: none;
+    }
   }
+
   &__upload {
     width: 90%;
     padding-left: 1rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  &__avatar-responsive {
+    display: none;
+    @include tablet {
+      width: 2.5rem;
+      height: 2.5rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
   &__button {
     @include button;
     margin-bottom: 1rem;
+    @include tablet {
+      width: 12rem;
+      margin-bottom: 0;
+    }
   }
   &__span {
     width: 80%;
