@@ -10,6 +10,8 @@
       padding-bottom: 0;
       padding-top: 1rem;
       margin-left: 0.5rem;
+      @include desktop {
+      }
     }
   }
   &__box {
@@ -47,6 +49,9 @@
     @include tablet {
       display: flex;
       flex-direction: row;
+      @include desktop {
+        width: 70%;
+      }
     }
   }
 

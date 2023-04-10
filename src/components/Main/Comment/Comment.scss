@@ -11,6 +11,9 @@
   @include tablet {
     width: 90%;
     margin-left: 1.5rem;
+    @include desktop {
+      width: 97%;
+    }
   }
 
   &__avatar {

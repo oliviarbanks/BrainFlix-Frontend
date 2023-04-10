@@ -7,6 +7,10 @@
   @include tablet {
     margin-top: 1rem;
   }
+  @include desktop {
+    border-top: none;
+    margin: 0;
+  }
 
   &__header {
     font-size: 1rem;
@@ -15,6 +19,9 @@
     @include tablet {
       padding: 1rem 0 1rem 1rem;
       font-size: 0.7rem;
+      @include desktop {
+        padding: 1rem 0 0 1rem;
+      }
     }
   }
 }

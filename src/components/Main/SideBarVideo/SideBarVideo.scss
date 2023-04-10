@@ -6,6 +6,9 @@
   align-items: center;
   @include tablet {
     padding-left: 1rem;
+    @include desktop {
+      margin: 1rem 0;
+    }
   }
 
   &__img {
@@ -17,12 +20,18 @@
     @include tablet {
       width: 6.5rem;
       max-height: 4rem;
+      @include desktop {
+        margin: 0;
+      }
     }
   }
   &__content {
     padding-left: 1rem;
     @include tablet {
       width: 20%;
+      @include desktop {
+        width: 51%;
+      }
     }
   }
   &__title {

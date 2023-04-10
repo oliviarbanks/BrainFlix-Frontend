@@ -57,6 +57,10 @@
     @include tablet {
       margin-left: 0.5rem;
       font-size: 1rem;
+      @include desktop {
+        margin-left: 0;
+        width: 97%;
+      }
     }
   }
 }
