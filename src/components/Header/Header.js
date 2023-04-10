@@ -21,12 +21,18 @@ function Header() {
             placeholder="Search"
           />
           <img
-            className="header__avatar"
+            className="header__avatar-mobile"
             src={avatar}
             alt="Default Avatar"
           ></img>
         </div>
+
         <div className="header__upload">
+          <img
+            className="header__avatar-responsive"
+            src={avatar}
+            alt="Default Avatar"
+          ></img>
           <button className="header__button">
             <img
               className="header__upload-img"

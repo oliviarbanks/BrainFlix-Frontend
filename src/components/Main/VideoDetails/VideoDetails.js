@@ -4,20 +4,21 @@ import "./VideoDetails.scss";
 
 function VideoDetails({ videoData, videoIndex }) {
   const epoch = videoData[videoIndex].timestamp;
-  const date = new Date(epoch).toLocaleDateString("en-US");
+  const options = { month: "2-digit", day: "2-digit", year: "numeric" };
+  const date = new Date(epoch).toLocaleDateString("en-US", options);
 
   return (
     <div className="videoDetails">
       <h1 className="videoDetails__header">{videoData[videoIndex].title}</h1>
       <div className="videoDetails__container">
         <div className="videoDetails__info">
-          <h2 className="videoDetails__author">
+          <p className="videoDetails__author">
             By {videoData[videoIndex].channel}
-          </h2>
-          <p>{date}</p>
+          </p>
+          <p className="videoDetails__date">{date}</p>
         </div>
         <div className="videoDetails__images">
-          <p className="videoDetails__icon">
+          <p className="videoDetails__icon eyeLogo">
             <img className="icon__logo" src={views} alt="eye views image"></img>
             {videoData[videoIndex].views}
           </p>

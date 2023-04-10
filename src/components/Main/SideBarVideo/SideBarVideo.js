@@ -4,7 +4,7 @@ function SideBarVideo({ video, clickHandler, index }) {
   return (
     <div className="videos" onClick={() => clickHandler(index)}>
       <div className="videos__container">
-        <img className="videos__item" src={video.image}></img>
+        <img className="videos__img" src={video.image}></img>
       </div>
       <div className="videos__content">
         <p className="videos__title">{video.title}</p>
