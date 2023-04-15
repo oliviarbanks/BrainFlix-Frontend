@@ -1,7 +1,7 @@
 import "./Comment.scss";
 
-function Comment({ comment }) {
-  const epoch = comment.timestamp;
+function Comment({ userComment }) {
+  const epoch = userComment.timestamp;
   const options = { month: "2-digit", day: "2-digit", year: "numeric" };
   const date = new Date(epoch).toLocaleDateString("en-US", options);
 
@@ -10,11 +10,11 @@ function Comment({ comment }) {
       <div className="comment__avatar"></div>
       <div className="comment__container">
         <div className="comment__header">
-          <h3 className="comment__author">{comment.name}</h3>
+          <h3 className="comment__author">{userComment.name}</h3>
           <p className="comment__date">{date}</p>
         </div>
         <div className="comment__comment-box">
-          <p className="comment__comment">{comment.comment}</p>
+          <p className="comment__comment">{userComment.comment}</p>
         </div>
       </div>
     </div>

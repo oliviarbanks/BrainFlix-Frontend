@@ -24,23 +24,31 @@ function MainVideoPage() {
   const filteredVideos = videoList.filter(
     (video) => video.id !== videoIdToShow
   );
+  console.log(filteredVideos);
 
-  //populating preview video list
   useEffect(() => {
     axios.get(`${baseURL}/${APIKey}`).then((response) => {
-      console.log(response.data);
       setVideoList(response.data);
     });
   }, []);
+
   return (
     <div>
       <div className="app">
         <div className="app__commentDetails">
-          <VideoDetails videoList={filteredVideos} />
-          <CommentsContainer setVideoList={videoIdToShow} />
+          <VideoDetails
+            videoIdToShow={videoIdToShow}
+            baseURL={baseURL}
+            APIKey={APIKey}
+          />
+          <CommentsContainer
+            videoIdToShow={videoIdToShow}
+            baseURL={baseURL}
+            APIKey={APIKey}
+          />
         </div>
         <div className="app__videoDetails">
-          <SideBarVideosContainer videoData={videoList} />
+          <SideBarVideosContainer filteredVideos={filteredVideos} />
         </div>
       </div>
     </div>

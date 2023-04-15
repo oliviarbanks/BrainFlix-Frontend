@@ -2,12 +2,29 @@ import Comment from "../Comment/Comment";
 import "./CommentsContainer.scss";
 import avatar from "../../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../../assets/icons/add_comment.svg";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-function CommentsContainer() {
+function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
+  const [comment, setComment] = useState(null);
+
+  useEffect(() => {
+    if (videoIdToShow === null) {
+      return;
+    }
+    axios.get(`${baseURL}/${videoIdToShow}${APIKey}`).then((response) => {
+      setComment(response.data.comments);
+    });
+  }, [videoIdToShow]);
+  console.log(comment);
+
+  if (comment === null) {
+    return <div>Loading</div>;
+  }
+
   return (
     <div className="commentContainer">
       <h1>This is the comments container</h1>
-      {/* <p className="commentContainer__count">{commentCount} Comments</p> */}
       <div className="commentContainer__box">
         <img
           className="commentContainer__avatar"
@@ -24,15 +41,14 @@ function CommentsContainer() {
               placeholder="Add a new comment"
             ></input>
             <button className="commentContainer__button">
-              {/* <img src={commentIcon} alt="add comment icon"></img> */}
               <span className="commentContainer__button--text">COMMENT</span>
             </button>
           </div>
         </form>
       </div>
-      {/* {videoData[videoIndex].comments.map((comment) => (
-        <Comment key={comment.id} comment={comment} />
-      ))} */}
+      {comment.map((userComment) => (
+        <Comment key={userComment.id} userComment={userComment} />
+      ))}
     </div>
   );
 }
