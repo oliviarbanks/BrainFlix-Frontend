@@ -9,8 +9,8 @@ function SideBarVideosContainer({ videoData, clickHandler }) {
         return (
           <SideBarVideo
             key={index}
-            index={index}
-            clickHandler={clickHandler}
+            // index={index}
+            // clickHandler={clickHandler}
             video={video}
           />
         );

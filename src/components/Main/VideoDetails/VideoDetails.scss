@@ -21,6 +21,7 @@
     padding: 0 1rem;
     @include tablet {
       border-top: none;
+      border-bottom: none;
     }
   }
   &__info {

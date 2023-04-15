@@ -4,7 +4,6 @@
 .app {
   @include desktop {
     display: flex;
-    flex-direction: row;
     width: 85%;
     margin: 0 auto;
   }

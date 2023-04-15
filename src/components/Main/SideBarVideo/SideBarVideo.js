@@ -1,8 +1,8 @@
 import "./SideBarVideo.scss";
 
-function SideBarVideo({ video, clickHandler, index }) {
+function SideBarVideo({ video }) {
   return (
-    <div className="videos" onClick={() => clickHandler(index)}>
+    <div className="videos">
       <div className="videos__container">
         <img className="videos__img" src={video.image}></img>
       </div>

@@ -3,11 +3,11 @@ import "./CommentsContainer.scss";
 import avatar from "../../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../../assets/icons/add_comment.svg";
 
-function CommentsContainer({ videoData, videoIndex }) {
-  const commentCount = videoData[videoIndex].comments.length;
+function CommentsContainer() {
   return (
     <div className="commentContainer">
-      <p className="commentContainer__count">{commentCount} Comments</p>
+      <h1>This is the comments container</h1>
+      {/* <p className="commentContainer__count">{commentCount} Comments</p> */}
       <div className="commentContainer__box">
         <img
           className="commentContainer__avatar"
@@ -24,15 +24,15 @@ function CommentsContainer({ videoData, videoIndex }) {
               placeholder="Add a new comment"
             ></input>
             <button className="commentContainer__button">
-              <img src={commentIcon} alt="add comment icon"></img>
+              {/* <img src={commentIcon} alt="add comment icon"></img> */}
               <span className="commentContainer__button--text">COMMENT</span>
             </button>
           </div>
         </form>
       </div>
-      {videoData[videoIndex].comments.map((comment) => (
+      {/* {videoData[videoIndex].comments.map((comment) => (
         <Comment key={comment.id} comment={comment} />
-      ))}
+      ))} */}
     </div>
   );
 }
