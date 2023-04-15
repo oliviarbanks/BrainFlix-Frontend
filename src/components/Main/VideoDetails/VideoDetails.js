@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./VideoDetails.scss";
+import likes from "../../../assets/icons/likes.svg";
+import views from "../../../assets/icons/views.svg";
 
 function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
   const [video, setVideo] = useState(null);
