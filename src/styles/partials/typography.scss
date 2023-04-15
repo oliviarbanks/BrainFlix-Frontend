@@ -1,15 +1,14 @@
 @font-face {
   font-family: "avenir", Arial, Helvetica, sans-serif;
-  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "avenir", Arial, Helvetica, sans-serif;
-  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"),
+    url(../../assets/fonts/Alternative/AvenirNextLTPro-Regular.ttf)
+      format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "avenir", Arial, Helvetica, sans-serif;
-  src: url(assets/font/AvenirNextLTPro-Bold.otf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"),
+    url(../../assets/fonts/Alternative/AvenirNextLTPro-Bold.ttf)
+      format("truetype");
   font-weight: 700;
 }
