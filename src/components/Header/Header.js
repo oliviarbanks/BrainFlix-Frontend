@@ -5,14 +5,14 @@ import search from "../../assets/icons/search.svg";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import UploadPage from "../../pages/UploadPage";
-import MainVideo from "../Main/MainVideo/MainVideo";
+import MainVideoPage from "../../pages/MainVideoPage";
 
 function Header() {
   return (
     <>
       <section className="header">
         <Link to="/">
-          {/* {MainVideo} */}
+          {MainVideoPage}
           <img className="header__logo" src={logo} alt="Brainflix Logo"></img>
         </Link>
         <div className="header__search">

@@ -1,27 +1,29 @@
 import { useState, useEffect } from "react";
 import SideBarVideosContainer from "../components/Main/SideBarVideosContainer/SideBarVideosContainer";
-// import VideoDetails from "../VideoDetails/VideoDetails";
-// import videoData from "../../../data/video-details.json";
+import VideoDetails from "../components/Main/VideoDetails/VideoDetails";
+import CommentsContainer from "../components/Main/CommentsContainer/CommentsContainer";
 import axios from "axios";
 import "./MainVideoPage.scss";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const baseURL = "https://project-2-api.herokuapp.com/videos";
 const APIKey = "?api_key=e13ff1e8-7949-4bc9-9d57-978fdffb3fb7";
 
 function MainVideoPage() {
-  const [videoIndex, setVideoIndex] = useState(null);
+  const { idFromParams } = useParams();
   const [videoList, setVideoList] = useState([]);
 
-  // const { idFromParams } = useParams();
+  let mainVideoId = null;
 
-  // const videos = videoData.filter(
-  //   (video) => video.id !== videoData[videoIndex].id
-  // );
+  if (videoList.length > 0) {
+    mainVideoId = videoList[0].id;
+  }
 
-  // const buttonClicked = (index) => {
-  //   setVideoIndex(index + 1);
-  // };
+  let videoIdToShow = idFromParams || mainVideoId;
+
+  const filteredVideos = videoList.filter(
+    (video) => video.id !== videoIdToShow
+  );
 
   //populating preview video list
   useEffect(() => {
@@ -30,20 +32,15 @@ function MainVideoPage() {
       setVideoList(response.data);
     });
   }, []);
-  console.log(videoList);
   return (
     <div>
       <div className="app">
         <div className="app__commentDetails">
-          {/* <VideoDetails videoData={videoData} videoIndex={videoIndex} />
-          <CommentsContainer videoData={videoData} videoIndex={videoIndex} /> */}
+          <VideoDetails videoList={filteredVideos} />
+          <CommentsContainer setVideoList={videoIdToShow} />
         </div>
         <div className="app__videoDetails">
-          <SideBarVideosContainer
-            videoData={videoList}
-            videoIndex={videoIndex}
-            // clickHandler={buttonClicked}
-          />
+          <SideBarVideosContainer videoData={videoList} />
         </div>
       </div>
     </div>
