@@ -5,7 +5,7 @@ function UploadPage() {
       <div className="">
         <form className="">
           <div>
-            <label className="" for="comment">
+            <label className="" htmlFor="comment">
               INSERT COMMENT HERE
             </label>
             <input className="" placeholder="Add a title to your video"></input>

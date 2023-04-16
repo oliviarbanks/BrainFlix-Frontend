@@ -11,8 +11,7 @@ function Header() {
   return (
     <>
       <section className="header">
-        <Link to="/">
-          {MainVideoPage}
+        <Link className="header__link" to="/">
           <img className="header__logo" src={logo} alt="Brainflix Logo"></img>
         </Link>
         <div className="header__search">
@@ -39,9 +38,8 @@ function Header() {
             src={avatar}
             alt="Default Avatar"
           ></img>
-          <Link to="uploadpage">
+          <Link className="header__link" to="uploadpage">
             <button className="header__button">
-              {UploadPage}
               <img
                 className="header__upload-img"
                 src={uploadButton}

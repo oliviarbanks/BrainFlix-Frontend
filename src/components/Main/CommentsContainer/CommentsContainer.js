@@ -24,7 +24,7 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
 
   return (
     <div className="commentContainer">
-      <h1>This is the comments container</h1>
+      <h2>This needs to show the number of comments "3 comments"</h2>
       <div className="commentContainer__box">
         <img
           className="commentContainer__avatar"
@@ -32,7 +32,7 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
           alt="avatar image"
         ></img>
         <form className="commentContainer__container">
-          <label className="commentContainer__header" for="comment">
+          <label className="commentContainer__header" htmlFor="comment">
             JOIN THE CONVERSATION
           </label>
           <div className="commentContainer__tablet">
@@ -41,14 +41,21 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
               placeholder="Add a new comment"
             ></input>
             <button className="commentContainer__button">
+              <img
+                className="icon_logo"
+                src={commentIcon}
+                alt="add comment icon"
+              ></img>
               <span className="commentContainer__button--text">COMMENT</span>
             </button>
           </div>
         </form>
       </div>
-      {comment.map((userComment) => (
-        <Comment key={userComment.id} userComment={userComment} />
-      ))}
+      <div className="commentContainer__comments">
+        {comment.map((userComment) => (
+          <Comment key={userComment.id} userComment={userComment} />
+        ))}
+      </div>
     </div>
   );
 }

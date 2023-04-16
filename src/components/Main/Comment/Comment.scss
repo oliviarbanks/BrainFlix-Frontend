@@ -2,11 +2,10 @@
 @import "../../../styles/partials/mixins";
 
 .comment {
-  display: flex;
-  border-top: 1px solid $Mercury;
   margin-left: 1rem;
+  display: flex;
+  border-top: 1px solid #e1e1e1;
   margin-top: 1rem;
-  margin-right: 1rem;
   width: 91%;
   @include tablet {
     width: 90%;
@@ -36,8 +35,9 @@
   }
   &__header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 15rem;
   }
   &__author {
     margin-top: 0;
@@ -58,6 +58,7 @@
   &__comment {
     margin: 0;
     font-size: 0.8rem;
+    width: 98%;
     @include tablet {
       font-size: 0.9rem;
     }
