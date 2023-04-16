@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./VideoDetails.scss";
-import likes from "../../../assets/icons/likes.svg";
-import views from "../../../assets/icons/views.svg";
+import viewsIcon from "../../../assets/icons/views.svg";
+import likesIcon from "../../../assets/icons/likes.svg";
 
 function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
   const [video, setVideo] = useState(null);
@@ -28,20 +28,27 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
 
   return (
     <div className="videoDetails">
+      {/* <div className="videoDetails__container"> */}
+      <div className="videoDetails__hero">
+        <video className="videoDetails__main" poster={image} controls></video>
+      </div>
+      <h1 className="videoDetails__header">{title}</h1>
       <div className="videoDetails__container">
-        <video className="video__main" poster={image} controls></video>
-        <div>{title}</div>
         <div className="videoDetails__info">
           <p className="videoDetails__author">{channel}</p>
+          <p className="videoDetails__date">{date}</p>
         </div>
-        <div>{date}</div>
-        <div className="videoDetails__images">
+        <div className="videoDetails__icons">
           <p className="videoDetails__icon eyeLogo">
-            <img className="icon__logo" src={views} alt="eye views image"></img>
+            <img
+              className="icon__logo"
+              src={viewsIcon}
+              alt="eye views image"
+            ></img>
             {views}
           </p>
           <p className="videoDetails__icon">
-            <img className="icon__logo" src={likes} alt="likes image"></img>
+            <img className="icon__logo" src={likesIcon} alt="likes image"></img>
             {likes}
           </p>
         </div>

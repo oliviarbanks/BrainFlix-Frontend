@@ -1,12 +1,6 @@
 @import "../../../styles/partials/variables";
 @import "../../../styles/partials/mixins";
 
-.video__main {
-  width: 300px;
-  height: 300px;
-  margin: auto;
-}
-
 .videoDetails {
   &__header {
     font-size: 1.5rem;
@@ -17,27 +11,34 @@
       font-weight: 900;
     }
   }
+
+  &__hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__main {
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+  }
+  &__header {
+    font-size: 2rem;
+  }
+
   &__container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid $Mercury;
-    border-bottom: 1px solid $Mercury;
-    padding: 0 1rem;
+    align-items: flex-start;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    margin-left: 1rem;
+    width: 90%;
     @include tablet {
       border-top: none;
       border-bottom: none;
     }
   }
-  &__info {
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-    }
-  }
+
   &__author {
     font-size: 1rem;
     font-weight: 700;
@@ -47,12 +48,12 @@
       font-weight: 700;
     }
   }
+
   &__date {
     color: $Silver;
   }
-  &__images {
-    display: flex;
-    flex-direction: column;
+  &__icons {
+    padding-left: 14rem;
     color: $Silver;
 
     @include tablet {
