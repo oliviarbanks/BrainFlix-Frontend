@@ -23,7 +23,7 @@
     height: 15rem;
   }
   &__header {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   &__container {
@@ -53,7 +53,7 @@
     color: $Silver;
   }
   &__icons {
-    padding-left: 14rem;
+    padding-left: 4rem;
     color: $Silver;
 
     @include tablet {
@@ -64,19 +64,11 @@
   &__icon {
     display: flex;
   }
-
-  &__title {
-    width: 100%;
-    padding: 0 1rem;
-    font-size: 0.9rem;
-    @include tablet {
-      margin-left: 0.5rem;
-      font-size: 1rem;
-      @include desktop {
-        margin-left: 0;
-        width: 97%;
-      }
-    }
+  &__description {
+    width: 88%;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    padding-top: 1rem;
   }
 }
 .icon__logo {

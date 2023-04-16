@@ -28,7 +28,6 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
 
   return (
     <div className="videoDetails">
-      {/* <div className="videoDetails__container"> */}
       <div className="videoDetails__hero">
         <video className="videoDetails__main" poster={image} controls></video>
       </div>
@@ -53,7 +52,7 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
           </p>
         </div>
       </div>
-      {description}
+      <div className="videoDetails__description">{description}</div>
     </div>
   );
 }
