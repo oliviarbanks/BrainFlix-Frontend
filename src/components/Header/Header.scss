@@ -18,16 +18,23 @@
       padding-left: 1rem;
       padding-right: 0px;
       margin-right: 6.5rem;
+      width: 100%;
       @include desktop {
         width: 25%;
         margin-left: 5rem;
       }
     }
   }
+  &__search-container {
+    display: flex;
+    margin-left: 1rem;
+  }
   &__search {
     display: flex;
     justify-content: space-around;
+    width: 100%;
     padding-top: 1rem;
+    position: relative;
     @include desktop {
       margin-left: 25rem;
     }
@@ -42,14 +49,21 @@
     color: #323232;
     padding-left: 2rem;
     background-color: $Alabaster;
+    width: 100%;
     @include tablet {
-      width: 13rem;
+      width: 13.5rem;
       height: 2.5rem;
+      margin-left: 6.5rem;
     }
   }
   &__search-img {
-    position: relative;
-    left: 28px;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    @include tablet {
+      bottom: 0.7rem;
+      left: 7rem;
+    }
   }
 
   &__avatar-mobile {

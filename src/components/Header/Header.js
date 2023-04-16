@@ -14,17 +14,19 @@ function Header() {
         <Link className="header__link" to="/">
           <img className="header__logo" src={logo} alt="Brainflix Logo"></img>
         </Link>
-        <div className="header__search">
-          <img
-            className="header__search-img"
-            src={search}
-            alt="magnifying glass"
-          />
-          <input
-            className="header__search-input"
-            type="text"
-            placeholder="Search"
-          />
+        <div className="header__search-container">
+          <div className="header__search">
+            <input
+              className="header__search-input"
+              type="text"
+              placeholder="Search"
+            />
+            <img
+              className="header__search-img"
+              src={search}
+              alt="magnifying glass"
+            />
+          </div>
           <img
             className="header__avatar-mobile"
             src={avatar}
