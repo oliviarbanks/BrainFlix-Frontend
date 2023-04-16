@@ -17,9 +17,9 @@
 
   &__avatar {
     @include avatar;
+    width: 3.5rem;
     background-color: $Mercury;
     margin-right: 0.5rem;
-    margin-top: 1rem;
     @include tablet {
       width: 1%;
       height: 2rem;
@@ -37,7 +37,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15rem;
   }
   &__author {
     margin-top: 0;

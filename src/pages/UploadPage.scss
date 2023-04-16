@@ -1,0 +1,72 @@
+@import "../styles/partials/typography";
+@import "../styles/partials/mixins";
+
+.upload {
+  &__header {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-top: 1px solid $Mercury;
+    width: 100%;
+  }
+  &__subcontainer {
+    width: 100%;
+  }
+  &__subheader {
+    padding-left: 1rem;
+    color: $Silver;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+  &__image {
+    height: 10rem;
+    width: 91%;
+    border-radius: 4px;
+    margin: 0 1rem;
+  }
+  &__form-container {
+    margin-left: 1rem;
+    padding-top: 1rem;
+  }
+  &__form-title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__label {
+    font-weight: 600;
+    color: $Silver;
+  }
+  &__input-title {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background-color: $Alabaster;
+    border-radius: 4px;
+    border: 1px solid $Silver;
+  }
+  &__form-description {
+    padding-top: 1rem;
+  }
+  &__input-description {
+    width: 93%;
+    height: 5rem;
+    background-color: $Alabaster;
+    border-radius: 4px;
+    border: 1px solid $Silver;
+  }
+  &__publish {
+    @include button;
+    width: 92%;
+    margin-left: 1rem;
+  }
+  &__span {
+    width: 80%;
+  }
+  &__cancel {
+    padding-left: 8.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: $BrainFlix-Blue-primary;
+    font-weight: 700;
+  }
+}

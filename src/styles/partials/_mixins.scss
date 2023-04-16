@@ -25,10 +25,11 @@
   margin-top: 1rem;
 }
 @mixin avatar {
-  width: 15%;
+  width: 3rem;
   object-fit: cover;
   border-radius: 50%;
   height: 3rem;
   padding-left: 1rem;
-  padding-right: 1.8rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
 }
