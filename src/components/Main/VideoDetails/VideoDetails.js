@@ -34,7 +34,7 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
       <h1 className="videoDetails__header">{title}</h1>
       <div className="videoDetails__container">
         <div className="videoDetails__info">
-          <p className="videoDetails__author">{channel}</p>
+          <p className="videoDetails__author">By {channel}</p>
           <p className="videoDetails__date">{date}</p>
         </div>
         <div className="videoDetails__icons">

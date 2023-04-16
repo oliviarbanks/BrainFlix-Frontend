@@ -39,6 +39,9 @@
     font-weight: 700;
     margin: 0;
     font-size: 0.7rem;
+    @include tablet {
+      font-size: 0.65rem;
+    }
   }
   &__author {
     margin-top: 0.5rem;

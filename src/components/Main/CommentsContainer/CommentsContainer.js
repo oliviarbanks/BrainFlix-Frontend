@@ -24,7 +24,7 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
 
   return (
     <div className="commentContainer">
-      <h2>This needs to show the number of comments "3 comments"</h2>
+      <h2 className="commentContainer__header">3 Comments</h2>
       <div className="commentContainer__box">
         <img
           className="commentContainer__avatar"
@@ -32,7 +32,7 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
           alt="avatar image"
         ></img>
         <form className="commentContainer__container">
-          <label className="commentContainer__header" htmlFor="comment">
+          <label className="commentContainer__subheader" htmlFor="comment">
             JOIN THE CONVERSATION
           </label>
           <div className="commentContainer__tablet">
