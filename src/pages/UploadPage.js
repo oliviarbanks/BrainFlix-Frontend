@@ -35,6 +35,8 @@ function UploadPage() {
             ></input>
           </div>
         </div>
+      </form>
+      <div className="upload__buttons">
         <button className="upload__publish">
           <img
             className="upload__icon"
@@ -43,8 +45,8 @@ function UploadPage() {
           ></img>
           <span className="upload__span">PUBLISH</span>
         </button>
-      </form>
-      <div className="upload__cancel">CANCEL</div>
+        <p className="upload__cancel">CANCEL</p>
+      </div>
     </div>
   );
 }
