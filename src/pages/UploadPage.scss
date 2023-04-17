@@ -16,11 +16,19 @@
       margin-left: 1rem;
       padding-bottom: 1rem;
       font-weight: 700;
+      @include desktop {
+        margin-left: 6rem;
+      }
     }
   }
-  &__subcontainer {
-    width: 100%;
+  &__desktop {
+    @include desktop {
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 5rem;
+    }
   }
+
   &__subheader {
     padding-left: 1rem;
     color: $Silver;
@@ -58,6 +66,9 @@
     background-color: $Alabaster;
     border-radius: 4px;
     border: 1px solid $Mercury;
+    @include desktop {
+      width: 49.5rem;
+    }
   }
   &__form-description {
     padding-top: 1rem;
@@ -70,6 +81,10 @@
     border: 1px solid $Mercury;
     @include tablet {
       width: 97%;
+      @include desktop {
+        width: 49.5rem;
+        padding-left: 1rem;
+      }
     }
   }
   &__buttons {
@@ -90,6 +105,9 @@
       width: 25%;
       height: 2.5rem;
       margin-top: 1.5rem;
+      @include desktop {
+        width: 15%;
+      }
     }
   }
   &__span {

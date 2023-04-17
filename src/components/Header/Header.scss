@@ -16,11 +16,10 @@
     padding: 1rem 0 0 5.5rem;
     @include tablet {
       padding-left: 1rem;
-      padding-right: 0px;
       margin-right: 6.5rem;
       width: 100%;
       @include desktop {
-        width: 25%;
+        width: 75%;
         margin-left: 5rem;
       }
     }
