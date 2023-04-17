@@ -16,7 +16,6 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
       setComment(response.data.comments);
     });
   }, [videoIdToShow]);
-  console.log(comment);
 
   if (comment === null) {
     return <div>Loading</div>;
@@ -24,7 +23,7 @@ function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
 
   return (
     <div className="commentContainer">
-      <h2 className="commentContainer__header">3 Comments</h2>
+      <h2 className="commentContainer__header">{comment.length} Comments</h2>
       <div className="commentContainer__box">
         <img
           className="commentContainer__avatar"

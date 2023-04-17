@@ -5,11 +5,18 @@
   &__detailsContainer {
     @include desktop {
       display: flex;
+      justify-content: flex-start;
+    }
+  }
+  &__details {
+    @include desktop {
+      width: 65%;
     }
   }
   &__videoList {
     @include desktop {
       margin-top: -14rem;
+      border-left: 1px solid $Mercury;
     }
   }
 }
