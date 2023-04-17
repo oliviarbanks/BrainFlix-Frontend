@@ -34,21 +34,23 @@ function MainVideoPage() {
 
   return (
     <div>
-      <div className="app">
-        <div className="app__commentDetails">
-          <VideoDetails
-            videoIdToShow={videoIdToShow}
-            baseURL={baseURL}
-            APIKey={APIKey}
-          />
-          <CommentsContainer
-            videoIdToShow={videoIdToShow}
-            baseURL={baseURL}
-            APIKey={APIKey}
-          />
-        </div>
-        <div className="app__videoDetails">
-          <SideBarVideosContainer filteredVideos={filteredVideos} />
+      <div className="main">
+        <VideoDetails
+          videoIdToShow={videoIdToShow}
+          baseURL={baseURL}
+          APIKey={APIKey}
+        />
+        <div className="main__detailsContainer">
+          <div className="main__details">
+            <CommentsContainer
+              videoIdToShow={videoIdToShow}
+              baseURL={baseURL}
+              APIKey={APIKey}
+            />
+          </div>
+          <div className="main__videoList">
+            <SideBarVideosContainer filteredVideos={filteredVideos} />
+          </div>
         </div>
       </div>
     </div>

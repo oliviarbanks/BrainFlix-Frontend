@@ -2,6 +2,9 @@
 @import "../../../styles/partials/mixins";
 
 .commentContainer {
+  @include desktop {
+    padding-left: 3rem;
+  }
   &__count {
     font-weight: 700;
     padding-bottom: 1rem;
@@ -10,8 +13,6 @@
       padding-bottom: 0;
       padding-top: 1rem;
       margin-left: 0.5rem;
-      @include desktop {
-      }
     }
   }
   &__header {
@@ -41,13 +42,12 @@
     padding-right: 1rem;
     margin-top: 2rem;
     @include tablet {
-      @include tablet {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin-left: 0.5rem;
-      }
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 0.5rem;
     }
   }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -94,5 +94,8 @@
   }
   &__comments {
     padding-bottom: 1rem;
+    @include desktop {
+      width: 75%;
+    }
   }
 }

@@ -1,0 +1,15 @@
+@import "../styles/partials/mixins";
+@import "../styles/partials/variables";
+
+.main {
+  &__detailsContainer {
+    @include desktop {
+      display: flex;
+    }
+  }
+  &__videoList {
+    @include desktop {
+      margin-top: -14rem;
+    }
+  }
+}

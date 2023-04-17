@@ -1,8 +1,20 @@
+import { useState } from "react";
 import "./UploadPage.scss";
 import bikeImage from "../assets/images/Upload-video-preview.jpg";
 import uploadIcon from "../assets/icons/publish.svg";
 
 function UploadPage() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handlePublishClick = (e) => {
+    e.preventDefault();
+    if (title && description) {
+      alert("Upload");
+      window.location.href = "/";
+    }
+  };
+
   return (
     <div className="upload">
       <h1 className="upload__header">Upload Video </h1>
@@ -26,6 +38,8 @@ function UploadPage() {
                 <input
                   className="upload__input-title"
                   placeholder="Add a title to your video"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                 ></input>
               </div>
               <div className="upload__form-description">
@@ -35,19 +49,20 @@ function UploadPage() {
                 <input
                   className="upload__input-description"
                   placeholder="Add a description to your video"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></input>
               </div>
             </div>
           </form>
         </div>
       </div>
-
       <div className="upload__buttons">
-        <button className="upload__publish">
+        <button className="upload__publish" onClick={handlePublishClick}>
           <img
             className="upload__icon"
             src={uploadIcon}
-            alt="upload icon standard image"
+            alt="upload icon"
           ></img>
           <span className="upload__span">PUBLISH</span>
         </button>

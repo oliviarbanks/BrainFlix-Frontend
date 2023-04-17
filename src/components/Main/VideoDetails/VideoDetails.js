@@ -32,24 +32,26 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
         <video className="videoDetails__main" poster={image} controls></video>
       </div>
       <h1 className="videoDetails__header">{title}</h1>
-      <div className="videoDetails__container">
-        <div className="videoDetails__info">
-          <p className="videoDetails__author">By {channel}</p>
-          <p className="videoDetails__date">{date}</p>
-        </div>
-        <div className="videoDetails__icons">
-          <p className="videoDetails__icon eyeLogo">
-            <img
-              className="icon__logo"
-              src={viewsIcon}
-              alt="eye views image"
-            ></img>
-            {views}
-          </p>
-          <p className="videoDetails__icon">
-            <img className="icon__logo" src={likesIcon} alt="likes image"></img>
-            {likes}
-          </p>
+      <div>
+        <div className="videoDetails__container">
+          <div className="videoDetails__info">
+            <p className="videoDetails__author">By {channel}</p>
+            <p className="videoDetails__date">{date}</p>
+          </div>
+          <div className="videoDetails__icons">
+            <p className="videoDetails__icon eyeLogo">
+              <img className="icon__logo" src={viewsIcon} alt="eye icon"></img>
+              {views}
+            </p>
+            <p className="videoDetails__icon">
+              <img
+                className="icon__logo"
+                src={likesIcon}
+                alt="heart icon"
+              ></img>
+              {likes}
+            </p>
+          </div>
         </div>
       </div>
       <div className="videoDetails__description">{description}</div>
