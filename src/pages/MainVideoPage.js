@@ -24,7 +24,6 @@ function MainVideoPage() {
   const filteredVideos = videoList.filter(
     (video) => video.id !== videoIdToShow
   );
-  console.log(filteredVideos);
 
   useEffect(() => {
     axios.get(`${baseURL}/${APIKey}`).then((response) => {

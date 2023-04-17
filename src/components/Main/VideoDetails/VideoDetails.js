@@ -13,7 +13,6 @@ function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
     }
     axios.get(`${baseURL}/${videoIdToShow}${APIKey}`).then((response) => {
       setVideo(response.data);
-      console.log(response.data);
     });
   }, [videoIdToShow]);
 
