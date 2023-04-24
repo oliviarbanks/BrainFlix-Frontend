@@ -4,8 +4,6 @@ import uploadButton from "../../assets/icons/upload.svg";
 import search from "../../assets/icons/search.svg";
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import UploadPage from "../../pages/UploadPage";
-import MainVideoPage from "../../pages/MainVideoPage";
 
 function Header() {
   return (

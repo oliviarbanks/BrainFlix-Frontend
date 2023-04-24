@@ -16,8 +16,6 @@ function VideoDetails({ videoIdToShow, baseURL }) {
     });
   }, [videoIdToShow]);
 
-  console.log(video);
-
   if (video === null) {
     return <div>Loading...</div>;
   }

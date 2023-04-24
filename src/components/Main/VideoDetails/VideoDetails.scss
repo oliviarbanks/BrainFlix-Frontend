@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
     @include tablet {
       background-color: $BrainFlix-DarkBlack-secondary;
     }
@@ -27,6 +28,7 @@
     width: 100%;
     object-fit: cover;
     height: 15rem;
+
     @include tablet {
       height: 25rem;
       width: 90%;

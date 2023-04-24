@@ -5,8 +5,8 @@ function SideBarVideosContainer({ filteredVideos }) {
   return (
     <div className="videosContainer">
       <h2 className="videosContainer__header">NEXT VIDEOS</h2>
-      {filteredVideos.map((video, id) => {
-        return <SideBarVideo key={id} video={video} />;
+      {filteredVideos.map((video, id, title) => {
+        return <SideBarVideo key={id} video={video} alt={title} />;
       })}
     </div>
   );
