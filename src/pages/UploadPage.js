@@ -16,7 +16,7 @@ function UploadPage() {
     const newVideo = {
       title: title,
       description: description,
-      image: "http://localhost:8085/public/images/Upload-video-preview.jpg",
+      image: "http://localhost:8085/images/upload.jpg",
     };
     axios
       .post(`${baseURL}/videos`, newVideo)
@@ -26,10 +26,10 @@ function UploadPage() {
       .catch((error) => {
         console.error(error);
       });
-    // if (title && description) {
-    //   alert("Upload");
-    //   window.location.href = "/";
-    // }
+    if (title && description) {
+      alert("Upload");
+      window.location.href = "/";
+    }
   };
 
   return (
