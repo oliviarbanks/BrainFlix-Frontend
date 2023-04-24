@@ -2,6 +2,9 @@ import { useState } from "react";
 import "./UploadPage.scss";
 import bikeImage from "../assets/images/Upload-video-preview.jpg";
 import uploadIcon from "../assets/icons/publish.svg";
+import axios from "axios";
+
+const baseURL = "http://localhost:8085";
 
 function UploadPage() {
   const [title, setTitle] = useState("");
@@ -9,10 +12,24 @@ function UploadPage() {
 
   const handlePublishClick = (e) => {
     e.preventDefault();
-    if (title && description) {
-      alert("Upload");
-      window.location.href = "/";
-    }
+
+    const newVideo = {
+      title: title,
+      description: description,
+      image: "http://localhost:8085/public/images/Upload-video-preview.jpg",
+    };
+    axios
+      .post(`${baseURL}/videos`, newVideo)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    // if (title && description) {
+    //   alert("Upload");
+    //   window.location.href = "/";
+    // }
   };
 
   return (

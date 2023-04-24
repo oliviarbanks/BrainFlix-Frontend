@@ -5,20 +5,20 @@ import commentIcon from "../../../assets/icons/add_comment.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function CommentsContainer({ videoIdToShow, baseURL, APIKey }) {
+function CommentsContainer({ videoIdToShow, baseURL }) {
   const [comment, setComment] = useState(null);
 
   useEffect(() => {
     if (videoIdToShow === null) {
       return;
     }
-    axios.get(`${baseURL}/${videoIdToShow}${APIKey}`).then((response) => {
+    axios.get(`${baseURL}/videos/${videoIdToShow}`).then((response) => {
       setComment(response.data.comments);
     });
   }, [videoIdToShow]);
 
   if (comment === null) {
-    return <div>Loading</div>;
+    return <div>Loading...</div>;
   }
 
   return (

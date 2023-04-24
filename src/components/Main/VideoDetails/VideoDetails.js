@@ -4,20 +4,22 @@ import "./VideoDetails.scss";
 import viewsIcon from "../../../assets/icons/views.svg";
 import likesIcon from "../../../assets/icons/likes.svg";
 
-function VideoDetails({ videoIdToShow, baseURL, APIKey }) {
+function VideoDetails({ videoIdToShow, baseURL }) {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
     if (videoIdToShow === null) {
       return;
     }
-    axios.get(`${baseURL}/${videoIdToShow}${APIKey}`).then((response) => {
+    axios.get(`${baseURL}/videos/${videoIdToShow}`).then((response) => {
       setVideo(response.data);
     });
   }, [videoIdToShow]);
 
+  console.log(video);
+
   if (video === null) {
-    return <div>Loading</div>;
+    return <div>Loading...</div>;
   }
   const epoch = video.timestamp;
   const options = { month: "2-digit", day: "2-digit", year: "numeric" };

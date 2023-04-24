@@ -6,8 +6,7 @@ import axios from "axios";
 import "./MainVideoPage.scss";
 import { useParams } from "react-router-dom";
 
-const baseURL = "https://project-2-api.herokuapp.com/videos";
-const APIKey = "?api_key=e13ff1e8-7949-4bc9-9d57-978fdffb3fb7";
+const baseURL = "http://localhost:8085";
 
 function MainVideoPage() {
   const { idFromParams } = useParams();
@@ -26,7 +25,7 @@ function MainVideoPage() {
   );
 
   useEffect(() => {
-    axios.get(`${baseURL}/${APIKey}`).then((response) => {
+    axios.get(`${baseURL}/videos`).then((response) => {
       setVideoList(response.data);
     });
   }, []);
@@ -34,19 +33,11 @@ function MainVideoPage() {
   return (
     <div className="main__videoPage">
       <div className="main">
-        <VideoDetails
-          videoIdToShow={videoIdToShow}
-          baseURL={baseURL}
-          APIKey={APIKey}
-        />
+        <VideoDetails videoIdToShow={videoIdToShow} baseURL={baseURL} />
       </div>
       <div className="main__detailsContainer">
         <div className="main__details">
-          <CommentsContainer
-            videoIdToShow={videoIdToShow}
-            baseURL={baseURL}
-            APIKey={APIKey}
-          />
+          <CommentsContainer videoIdToShow={videoIdToShow} baseURL={baseURL} />
         </div>
         <div className="main__videoList">
           <SideBarVideosContainer filteredVideos={filteredVideos} />
